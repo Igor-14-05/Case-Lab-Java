@@ -1,0 +1,20 @@
+Создание таблицы
+CREATE TABLE staff (
+	"id"	INTEGER NOT NULL UNIQUE,
+	"surname"	TEXT NOT NULL,
+	"experience"	TEXT NOT NULL,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);
+
+Заполняем таблицу
+INSERT INTO staff (surname,experience)
+VALUES  ('Иванов',10),
+    ('Петров',12),
+    ('Сидорров',14)
+
+
+Выбираем необходимые нам данные
+SELECT surname
+FROM staff
+ORDER by experience
+LIMIT 1 OFFSET 1;
